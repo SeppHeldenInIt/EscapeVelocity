@@ -835,6 +835,22 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8839694767251660592, guid: e43d730095b90de408d2c817624b93d5, type: 3}
+      propertyPath: m_Size.x
+      value: 4.7177143
+      objectReference: {fileID: 0}
+    - target: {fileID: 8839694767251660592, guid: e43d730095b90de408d2c817624b93d5, type: 3}
+      propertyPath: m_Size.y
+      value: 4.043106
+      objectReference: {fileID: 0}
+    - target: {fileID: 8839694767251660592, guid: e43d730095b90de408d2c817624b93d5, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.019568086
+      objectReference: {fileID: 0}
+    - target: {fileID: 8839694767251660592, guid: e43d730095b90de408d2c817624b93d5, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.018332005
+      objectReference: {fileID: 0}
+    - target: {fileID: 8839694767251660592, guid: e43d730095b90de408d2c817624b93d5, type: 3}
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
@@ -951,6 +967,22 @@ PrefabInstance:
     - target: {fileID: 7497583187582110613, guid: e43d730095b90de408d2c817624b93d5, type: 3}
       propertyPath: m_Name
       value: Player2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8839694767251660592, guid: e43d730095b90de408d2c817624b93d5, type: 3}
+      propertyPath: m_Size.x
+      value: 4.7177143
+      objectReference: {fileID: 0}
+    - target: {fileID: 8839694767251660592, guid: e43d730095b90de408d2c817624b93d5, type: 3}
+      propertyPath: m_Size.y
+      value: 4.043106
+      objectReference: {fileID: 0}
+    - target: {fileID: 8839694767251660592, guid: e43d730095b90de408d2c817624b93d5, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.019568086
+      objectReference: {fileID: 0}
+    - target: {fileID: 8839694767251660592, guid: e43d730095b90de408d2c817624b93d5, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.018332005
       objectReference: {fileID: 0}
     - target: {fileID: 8839694767251660592, guid: e43d730095b90de408d2c817624b93d5, type: 3}
       propertyPath: m_IsTrigger
