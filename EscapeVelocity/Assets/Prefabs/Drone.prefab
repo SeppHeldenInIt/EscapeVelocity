@@ -128,7 +128,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   followSpeed: 5
-  yOffset: 0
 --- !u!114 &-1497528148826911534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,9 +141,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  followSpeed: 5
-  warningLinePrefab: {fileID: 0}
-  laserBeamPrefab: {fileID: 0}
+  movementScript: {fileID: -7806668593165532603}
+  laserInterval: 6
   warningDuration: 1.5
   laserDuration: 0.5
-  laserSpawnPoint: {fileID: 0}
+  warningLinePrefab: {fileID: 5593577252238946860, guid: 205c572abb15505468c028edd0ac0d24, type: 3}
+  laserBeamPrefab: {fileID: 5593577252238946860, guid: f1cffe90c9e3f6647b7bee3d423b78cc, type: 3}
+  laserSpawnPoint: {fileID: 2957650776771431169}
+  raycastLength: 20
+  raycastOffset: 0.5
