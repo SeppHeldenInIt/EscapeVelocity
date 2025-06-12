@@ -11,28 +11,29 @@ public class Bullet : MonoBehaviour
 
     private void Update()
     {
+        cooldown -= 1 * Time.deltaTime;
         transform.position += bDirection * bulletSpeed * Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy")
+        if (collision.CompareTag("Obstacle"))
         {
-            //Destroy(collision.gameObject);
-            gameObject.SetActive(false);
+            Destroy(collision.gameObject);
         }
 
         else
         {
-            StartCoroutine(DisableAfterDelay(cooldown));
+            if (cooldown >= 0)
+            Destroy(gameObject);
         }
     }
 
-    private IEnumerator DisableAfterDelay(float delay)
-    {
-        yield return new WaitForSeconds(delay);
+    //private IEnumerator DisableAfterDelay(float delay)
+    //{
+     //   yield return new WaitForSeconds(delay);
 
-        gameObject.SetActive(false);
-    }
+    //    gameObject.SetActive(false);
+    //}
 
 }
