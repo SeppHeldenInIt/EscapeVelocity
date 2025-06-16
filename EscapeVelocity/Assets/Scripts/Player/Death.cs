@@ -5,6 +5,7 @@ using UnityEngine;
 public class Death : MonoBehaviour
 {
     [SerializeField] private Health _health;
+    
     void Start()
     {
         _health = GetComponent<Health>();
