@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObstacleGen : MonoBehaviour
 {
     public GameObject wallSegmentPrefab;
+    public GameObject wallSegmentPrefab2;
     public float spawnInterval = 2f;
     public float moveSpeed = 5f;
     public float destroyX = -15f;
