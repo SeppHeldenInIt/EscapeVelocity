@@ -15,10 +15,11 @@ public class PauseMenu : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Joystick1Button2))
+        if (Input.GetKeyDown(KeyCode.JoystickButton2))
         {
             if (isPaused)
             {
+                Debug.Log("pause");
                 ResumeGame();
             }
             else
