@@ -347,7 +347,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallSegmentPrefab: {fileID: 9197725222061491163, guid: 04c92b9d379c4624c8f26cfeaf08974c, type: 3}
+<<<<<<< HEAD
   wallSegmentPrefab2: {fileID: 0}
+=======
+>>>>>>> parent of bb3e4af (Damageflash, art en health)
   spawnInterval: 5
   moveSpeed: 3
   destroyX: -15
@@ -1539,10 +1542,13 @@ PrefabInstance:
       propertyPath: hearts.Array.size
       value: 6
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 1473120137227191719, guid: e43d730095b90de408d2c817624b93d5, type: 3}
       propertyPath: sceneName
       value: GameOver
       objectReference: {fileID: 0}
+=======
+>>>>>>> parent of bb3e4af (Damageflash, art en health)
     - target: {fileID: 3019449860198351468, guid: e43d730095b90de408d2c817624b93d5, type: 3}
       propertyPath: m_Sprite
       value: 
