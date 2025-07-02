@@ -14,7 +14,9 @@ public class Health : MonoBehaviour
     [SerializeField] public Sprite Piskel;
     [SerializeField] public Sprite emptyheart;
     [SerializeField] public Animator anim;
-
+    
+    // here is where we create the audio clip that can then be called by the manager script.
+    [SerializeField] private AudioClip damageSoundClip;
 
     private void Start()
     {
@@ -24,7 +26,8 @@ public class Health : MonoBehaviour
     public void Hit()
     {
         CurrentHealth -= Damage;
-        
+        // this is where play the sound fx
+        SoundFXManager.instance.PLaySoundFXClip(damageSoundClip, transform, 1f);
     }
 
     void Update()
@@ -33,11 +36,5 @@ public class Health : MonoBehaviour
         {
             MaxHealth = numOfHearts;
         }
-
-
-
-
-
-     
     }
 }
