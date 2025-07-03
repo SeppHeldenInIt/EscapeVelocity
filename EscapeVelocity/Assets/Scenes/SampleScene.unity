@@ -7171,6 +7171,10 @@ PrefabInstance:
       propertyPath: sceneName
       value: GameOver
       objectReference: {fileID: 0}
+    - target: {fileID: 3019449860198351468, guid: e43d730095b90de408d2c817624b93d5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4720416066835359949, guid: e43d730095b90de408d2c817624b93d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
