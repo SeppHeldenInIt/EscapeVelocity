@@ -26,7 +26,10 @@ public class Health : MonoBehaviour
     private void Start()
     {
         CurrentHealth = MaxHealth;
+        numOfHearts = MaxHealth;
         damageFlash = GetComponent<DamageFlash>();
+        Debug.Log(gameObject.name + " starting with " + CurrentHealth + " health.");
+        UpdateHearts();
     }
 
     public void Hit()
@@ -39,6 +42,7 @@ public class Health : MonoBehaviour
 
         }
 
+        numOfHearts = CurrentHealth;
         UpdateHearts();
 
 
@@ -47,16 +51,14 @@ public class Health : MonoBehaviour
 
     public void UpdateHearts()
     {
+        Debug.Log($"{gameObject.name} is updating hearts. Health: {CurrentHealth}");
+
         for (int i = 0; i < hearts.Length; i++)
         {
             if (i < CurrentHealth)
-            {
                 hearts[i].sprite = Piskel;
-            }
             else
-            {
                 hearts[i].sprite = emptyheart;
-            }
 
             hearts[i].enabled = (i < numOfHearts);
         }
