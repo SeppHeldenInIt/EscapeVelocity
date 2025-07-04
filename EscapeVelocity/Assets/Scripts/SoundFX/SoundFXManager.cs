@@ -1,3 +1,6 @@
+using UnityEngine;
+using UnityEngine.Rendering;
+
 // this is a test script for me to learn how to use a SoundFXManager! this will not be used in the actual product!
 
 // to have a sound fx play in unity is not that hard, say u want to play a sound when u damage a enemy right?
@@ -23,9 +26,6 @@
 
 // first you will want to create a empty game object in unity, reset its position and then add this script to it.
 //
-using UnityEngine;
-using UnityEngine.Rendering;
-
 public class SoundFXManager : MonoBehaviour
 {
     [SerializeField] private AudioSource soundFXObject;
@@ -35,35 +35,40 @@ public class SoundFXManager : MonoBehaviour
     // KEEP IN MIND! you only want to make something a Singleton if you know there is only going to be one of them in the scene ever
     // so keep that in mind when u set something like this up.
     public static SoundFXManager instance;
-    
+
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
         }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     // the folowing pretty much self explanatory.
-    public void PLaySoundFXClip(AudioClip audioClip, Transform, spawnTransform, float volume);
+    public void PLaySoundFXClip(AudioClip audioClip, Transform spawnTransform, float volume)
     {
         // this spwans in the game object, and since rotation will not matter for this we are saying Quaternion.
         AudioSource audioSource = Instantiate(soundFXObject, spawnTransform.position, Quaternion.identity);
-        
+
         // this is where you would assign the audio clip.
-        audioSource.clip = AudioClip;
-        
+        audioSource.clip = audioClip;
+
         // here you can assign the volume 
-        audioSource.volume = Volume;
-        
+        audioSource.volume = volume;
+
         // this actually lets you play the sound
         audioSource.Play();
-        
+
         // this gets the length of the sound fx clip
-        float cliplength = audioSource.clip.length; 
+        float cliplength = audioSource.clip.length;
+
         // once you have done this you need to add a nother empty gameobject to the scene, call this one SoundFXObject
         // make sure to unclick *play on awake* because we dont want it to just start on its own.
         // then make it a prefab, delete it from the scene, and ad the prefab to the earlier SoundFXManager object that we made.
+        Destroy(audioSource.gameObject, cliplength);
     }
-
 }
